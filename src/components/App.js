@@ -23,12 +23,13 @@ const GlobalStyle = createGlobalStyle `
     }
 
     a {
-        color: #333;
+        color: #fff;
         text-decoration: none;
     }
 
-
+    
 `
+
 
 const App = () => {
     return (

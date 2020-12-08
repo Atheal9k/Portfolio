@@ -6,7 +6,6 @@ const HeaderSection = styled.header`
     
 `
 const Div = styled.div`
-    &.navbar{
     display: flex;
     justify-content: space-between;
     align-items: ClientRect;
@@ -19,18 +18,31 @@ const Div = styled.div`
     top: 0px;
     padding: 0 30px;
 
-    .li &{
-        text-decoration: none;
-        text-color: black;
+    
+
+
+
+`
+
+const StyledLink = styled(Link)`
+    padding: 10px 20px;
+    margin 0 5px;
+ 
+
+    &:hover{
+        color: green;
     }
 
-}
 `
-
 const Ul = styled.ul `
-    list-style: none;
+    display:flex;
+
 `
 
+const H1 = styled.h1 `
+    font-weight: 300;
+    line-height: 1.2;
+`
 
 
 
@@ -38,19 +50,19 @@ const Ul = styled.ul `
 const Header = () => {
     return (
         <React.Fragment>
-            <HeaderSection className="hero">
-                <Div id="navbar" className="navbar">
-                    <h1>Victor Huang</h1>
+            <HeaderSection>
+                <Div>
+                    <H1>Victor Huang</H1>
                     <nav>
-                        <ul>
-                            <li><Link to="#">Project Showcase</Link></li>
-                            <li><Link to="#">My Story</Link></li>
-                            <li><Link to="#">Contact Me</Link></li>
-                        </ul>
+                        <Ul>
+                            <li><StyledLink to="#">Project Showcase</StyledLink></li>
+                            <li><StyledLink to="#">My Story</StyledLink></li>
+                            <li><StyledLink to="#">Contact Me</StyledLink></li>
+                        </Ul>
                     </nav>
                 </Div>
 
-                <div class="content">
+                <div>
                     <h1>Victor</h1>
                     <p>Huang</p>
                 </div>
