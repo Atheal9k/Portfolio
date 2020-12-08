@@ -5,6 +5,7 @@ import Header from './Header';
 
 
 const GlobalStyle = createGlobalStyle `
+
     * {
         box-sizing: border-box;
         padding: 0;
@@ -12,7 +13,7 @@ const GlobalStyle = createGlobalStyle `
     }
 
     body {
-        font-family: Open-Sans, Helvetica, Sans-Serif;
+        font-family: 'Raleway', sans-serif;
         background: #fff;
         color: #333;
         line-height: 1.6;

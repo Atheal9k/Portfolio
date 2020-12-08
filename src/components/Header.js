@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const HeaderSection = styled.header`
+    // background: url('/images/diana.jpg') no-repeat center center/cover;
+    background-color: black;
+    height: 100vh;
+    position: relative;
     
 `
 const Div = styled.div`
@@ -43,8 +47,35 @@ const H1 = styled.h1 `
     font-weight: 300;
     line-height: 1.2;
 `
+const Div2 = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 20px;
+    color: #fff;
+`
+const HH1 = styled.h1 `
+    cursor: pointer;
+    transition: 0.8s;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+    color: #222;
+    &:hover {
+        font-size: 7rem;
+        color: #fff;
+        text-shadow: 0 0 10px #fff;
+        0 0 20px #fff;
+        0 0 40px #fff;
+        0 0 80px #fff;
+        0 0 120px #fff;
+        0 0 160px #fff;
+    }
 
-
+`
 
 
 const Header = () => {
@@ -62,10 +93,10 @@ const Header = () => {
                     </nav>
                 </Div>
 
-                <div>
-                    <h1>Victor</h1>
-                    <p>Huang</p>
-                </div>
+                <Div2>
+                    <HH1>Welcome To Victor's Portfolio</HH1>
+                    
+                </Div2>
             </HeaderSection>
         </React.Fragment>
     )
