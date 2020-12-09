@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import styled, { createGlobalStyle} from 'styled-components';
 import Header from './Header';
+import Showcase from './Showcase';
 
 
 const GlobalStyle = createGlobalStyle `
@@ -38,6 +39,7 @@ const App = () => {
             <GlobalStyle />
             <BrowserRouter>
             <Header />
+            <Showcase />
             </BrowserRouter>
         </div>
     )

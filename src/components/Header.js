@@ -3,16 +3,17 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const HeaderSection = styled.header`
-    // background: url('/images/diana.jpg') no-repeat center center/cover;
-    background-color: black;
+    background: url('/images/diana.jpg') no-repeat center center/cover;
+    //background-color: black;
     height: 100vh;
     position: relative;
-    
+    background-attachment: fixed;
+    z-index: 50;
 `
 const Div = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: ClientRect;
+    align-items: center;
     background-color: #333;
     color: #fff;
     opacity: 0.8;
@@ -21,10 +22,6 @@ const Div = styled.div`
     position: fixed;
     top: 0px;
     padding: 0 30px;
-
-    
-
-
 
 `
 
@@ -58,7 +55,12 @@ const Div2 = styled.div `
     color: #fff;
 `
 const HH1 = styled.h1 `
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    position:fixed;
+    
     transition: 0.8s;
     font-size: 5rem;
     letter-spacing: 5px;
