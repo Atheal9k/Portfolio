@@ -3,23 +3,25 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 const HeaderSection = styled.header`
-    background: url('/images/diana.jpg') no-repeat center center/cover;
+    background: url('/images/night.jpg') no-repeat center center/cover;
     //background-color: black;
     height: 100vh;
-    position: relative;
+    position: sticky;
     background-attachment: fixed;
-    z-index: 50;
+    
+    
 `
 const Div = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: none;
     color: #fff;
+    text-shadow: 0 0 10px #fff;
     opacity: 0.8;
     width: 100%;
     height: 70px;
-    position: fixed;
+    position: relative;
     top: 0px;
     padding: 0 30px;
 
@@ -59,23 +61,20 @@ const HH1 = styled.h1 `
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position:fixed;
-    
+    position:absolute;
+     
     transition: 0.8s;
-    font-size: 5rem;
+    font-size: 7rem;
     letter-spacing: 5px;
     font-weight: 500;
-    color: #222;
-    &:hover {
-        font-size: 7rem;
-        color: #fff;
-        text-shadow: 0 0 10px #fff;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
         0 0 20px #fff;
         0 0 40px #fff;
         0 0 80px #fff;
         0 0 120px #fff;
         0 0 160px #fff;
-    }
+   
 
 `
 

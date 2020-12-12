@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import ShowcaseCards from './ShowcaseCards';
+
 
 
 const Section = styled.section `
@@ -10,27 +10,25 @@ const Section = styled.section `
     justify-content: center;
     align-content: center;
     position: relative;
-    background-color: black;
-
-
+    
     
 `
 
 
 
 
-const Showcase = () => {
+const StorySection = () => {
 
     return (
         <div>
             <Section>
-                <ShowcaseCards />
-                <ShowcaseCards />
-                <ShowcaseCards />
+                <h1>Victor's Story</h1>
+                <p>Suffered through hell and back</p>
+                <img src={'https://image-us.samsung.com/SamsungUS/home/audio/galaxy-buds/MB-04-JustWhatYouWantV4.jpg?$cm-g-fb-full-bleed-img-mobile-jpg$'}/>
             </Section>
         </div>
         
     )
 }
 
-export default Showcase
+export default StorySection

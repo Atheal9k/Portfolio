@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import ShowcaseCards from './ShowcaseCards';
+
 
 
 const Section = styled.section `
@@ -10,27 +10,22 @@ const Section = styled.section `
     justify-content: center;
     align-content: center;
     position: relative;
-    background-color: black;
-
-
     
 `
 
 
 
 
-const Showcase = () => {
+const BlogSection = () => {
 
     return (
         <div>
             <Section>
-                <ShowcaseCards />
-                <ShowcaseCards />
-                <ShowcaseCards />
+                <h2>hii</h2>
             </Section>
         </div>
         
     )
 }
 
-export default Showcase
+export default BlogSection

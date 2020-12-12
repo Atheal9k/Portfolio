@@ -2,7 +2,10 @@ import React from 'react';
 import {BrowserRouter, Link, Route} from 'react-router-dom';
 import styled, { createGlobalStyle} from 'styled-components';
 import Header from './Header';
-import Showcase from './Showcase';
+import TransitionSection from './TransitionSection';
+import Showcase from './Showcase.js';
+import StorySection from './StorySection';
+import BlogSection from './BlogSection';
 
 
 const GlobalStyle = createGlobalStyle `
@@ -39,7 +42,10 @@ const App = () => {
             <GlobalStyle />
             <BrowserRouter>
             <Header />
+            <TransitionSection />
             <Showcase />
+            <StorySection />
+            <BlogSection />
             </BrowserRouter>
         </div>
     )
