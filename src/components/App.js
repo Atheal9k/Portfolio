@@ -6,6 +6,7 @@ import TransitionSection from './TransitionSection';
 import Showcase from './Showcase.js';
 import StorySection from './StorySection';
 import BlogSection from './BlogSection';
+import FooterSection from './FooterSection';
 
 
 const GlobalStyle = createGlobalStyle `
@@ -46,6 +47,7 @@ const App = () => {
             <Showcase />
             <StorySection />
             <BlogSection />
+            <FooterSection />
             </BrowserRouter>
         </div>
     )

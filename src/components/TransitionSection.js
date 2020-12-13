@@ -31,6 +31,13 @@ const Section = styled.section `
     
 `
 
+const ImgHolder = styled.div `
+
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+`
 
 
 
@@ -39,10 +46,15 @@ const TransitionSection = () => {
     return (
         <div>
             <Section>
-                <h2>hii</h2>
-                <h2>hii</h2>
-                <h2>hii</h2>
+                <div>
+                <h1>Victor Has Worked With Reputable Blockchain Companies</h1>
+                </div>
+                
             </Section>
+
+            <ImgHolder>
+                    <img src={'https://miro.medium.com/max/852/1*bzYxka5FGrwtip2Gl2lq5w.jpeg'}/>
+                </ImgHolder>
         </div>
         
     )
