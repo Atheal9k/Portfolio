@@ -11,23 +11,6 @@ const Section = styled.section `
     align-content: center;
     position: relative;
     
-    clip: rect(0, auto, auto, 0);  
-    padding: 2rem;
-    text-align: center;
-    z-index: 99;
-    &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: -100px;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background-color: white;
-       
-        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-      }
-
     
 `
 
@@ -41,7 +24,7 @@ const ImgHolder = styled.div `
 
 
 
-const TransitionSection = () => {
+const BlockchainSection = () => {
 
     return (
         <div>
@@ -60,4 +43,4 @@ const TransitionSection = () => {
     )
 }
 
-export default TransitionSection
+export default BlockchainSection

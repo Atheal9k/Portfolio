@@ -27,6 +27,10 @@ const useStyles = makeStyles((theme) => ({
 
   ]
 
+  const card = [
+    {titles: 'hello'}
+  ]
+
 const Section = styled.section `
     display:flex;
     flex-direction: row;
@@ -75,7 +79,7 @@ const BlogSection = () => {
             <GridContainer>
             <Grid container spacing={3} className={classes.container}>
         
-        {gridProp.map((grids) => <Grid item xs={grids.xs} sm={grids.sm} md={grids.md}> <BlogCard /> </Grid> )}
+        {gridProp.map((grids) => <Grid item xs={grids.xs} sm={grids.sm} md={grids.md}> <BlogCard title={card.titles}/> </Grid> )}
 
       </Grid>
       </GridContainer>

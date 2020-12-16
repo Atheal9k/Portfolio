@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export const MusicCardDemo = React.memo(function MusicCard() {
+export const MusicCardDemo = React.memo(function MusicCard()  {
   const styles = useStyles();
   const mediaStyles = useFourThreeCardMediaStyles();
   const textCardContentStyles = useN04TextInfoContentStyles();
@@ -38,8 +38,8 @@ export const MusicCardDemo = React.memo(function MusicCard() {
       <CardContent>
         <TextInfoContent
           classes={textCardContentStyles}
-          overline={'Cardano'}
-          heading={'The Release Of Goguen'}
+          overline={title}
+          heading={title}
           body={
             'As Goguen is rolling out very soon...'
           }

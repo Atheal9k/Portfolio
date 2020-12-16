@@ -34,8 +34,9 @@ const ImgDiv = styled.div `
     align-content: flex-end;
     justify-content: center;
     
-    margin-left: 60px;
-    padding-left: 40px;
+    
+    width: 50%;
+    margin-left: 40px;
     max-height: 1000px;
 `
 
@@ -79,7 +80,7 @@ const StorySection = () => {
                 
                 </Div>
                 <ImgDiv>
-                <Img src={'https://image-us.samsung.com/SamsungUS/home/audio/galaxy-buds/MB-04-JustWhatYouWantV4.jpg?$cm-g-fb-full-bleed-img-mobile-jpg$'}/>
+                <Img src="images/sitting.jpg"/>
                 </ImgDiv>
             </Section>
         </div>
