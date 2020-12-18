@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 //import GoogleFontLoader from 'react-google-font-loader';
 import NoSsr from '@material-ui/core/NoSsr';
 import { makeStyles } from '@material-ui/core/styles';
@@ -19,14 +19,23 @@ import { useCoverCardMediaStyles } from '@mui-treasury/styles/cardMedia/cover';
 
 
 const DivCards = styled.div `
-    display: flex;
-    justify-content: space-between;
-    flex: 0 1 auto;
-    width: 100%;
-    height: 80vh;
+  
+    &:hover {
+      opacity: 0.5;
+
+      ${props => props.content && css `
+      opacity: 1;
+      padding-bottom: 50px;
+    `}
+    }
+    
+
+    
 `
-const Img = styled.img `
-    overflow:none;
+const DivContentShift = styled.div `
+&:hover {
+  padding-bottom: 50px;
+}
 
 `
 
@@ -60,7 +69,7 @@ const useStyles = makeStyles(() => ({
     },
   }));
 
-  export const ShowcaseCards = React.memo(function GalaxyCard() {
+  export const ShowcaseCards = ({images, title, subtitle, caption}) =>{
     const mediaStyles = useCoverCardMediaStyles({ bgPosition: 'top' });
     const styles = useStyles();
     return (
@@ -73,24 +82,32 @@ const useStyles = makeStyles(() => ({
             ]}
           /> */}
         </NoSsr>
+        <DivCards>
         <Card className={styles.card}>
           <CardMedia
             classes={mediaStyles}
             image={
-              'https://image-us.samsung.com/SamsungUS/home/audio/galaxy-buds/MB-04-JustWhatYouWantV4.jpg?$cm-g-fb-full-bleed-img-mobile-jpg$'
+              images
             }
           />
+          
           <Box py={3} px={2} className={styles.content}>
+            <DivCards content>
             <Info useStyles={useGalaxyInfoStyles}>
-              <InfoSubtitle>Galaxy</InfoSubtitle>
-              <InfoTitle>Buds 2019</InfoTitle>
-              <InfoCaption>Perfect for everyone</InfoCaption>
+              
+              <InfoSubtitle>{subtitle}</InfoSubtitle>
+              <InfoTitle>{title}</InfoTitle>
+              <InfoCaption>{caption}</InfoCaption>
+              
             </Info>
+            </DivCards>
           </Box>
+         
         </Card>
+        </DivCards>
       </>
     );
-  });
+  };
   export default ShowcaseCards
 
 // const ShowcaseCards = () => {

@@ -38,8 +38,8 @@ export const MusicCardDemo = React.memo(function MusicCard()  {
       <CardContent>
         <TextInfoContent
           classes={textCardContentStyles}
-          overline={title}
-          heading={title}
+          overline={"title"}
+          heading={"title"}
           body={
             'As Goguen is rolling out very soon...'
           }
