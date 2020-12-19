@@ -5,6 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import { Assessment } from "@material-ui/icons";
 import BlogCard from './BlogCard';
+import ada from '../resources/ada-logo.png';
 
 const useStyles = makeStyles((theme) => ({
     container: {
@@ -27,8 +28,9 @@ const useStyles = makeStyles((theme) => ({
 
   ]
 
-  const card = [
-    {titles: 'hello'}
+  const cardContent = [
+    {titles: 'hello'},
+    {titles: 'goodbye'}
   ]
 
 const Section = styled.section `
@@ -65,7 +67,7 @@ const BlogSection = () => {
 
     return (
         <DivWrapper>
-            <Section>
+            <Section> 
                 <Div>
                 <div>
                 <h2>Learn About Cryptocurrency</h2>
@@ -79,7 +81,9 @@ const BlogSection = () => {
             <GridContainer>
             <Grid container spacing={3} className={classes.container}>
         
-        {gridProp.map((grids) => <Grid item xs={grids.xs} sm={grids.sm} md={grids.md}> <BlogCard title={card.titles}/> </Grid> )}
+        {gridProp.map((grids) => <Grid item xs={grids.xs} sm={grids.sm} md={grids.md}> 
+        <BlogCard title={cardContent}/> 
+        </Grid> )}
 
       </Grid>
       </GridContainer>

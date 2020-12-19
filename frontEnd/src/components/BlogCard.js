@@ -22,30 +22,42 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export const MusicCardDemo = React.memo(function MusicCard()  {
+export const MusicCardDemo = ({title}) => {
   const styles = useStyles();
   const mediaStyles = useFourThreeCardMediaStyles();
   const textCardContentStyles = useN04TextInfoContentStyles();
   const shadowStyles = useOverShadowStyles({ inactive: true });
+
+  console.log(title)
+
+  const CardContentList = (title) => {
+    const listItems = title.map((number) => <div>{number}</div>)
+    return <div>{listItems}</div>
+  }
+  const numbers1 = [1, 2, 3, 4, 5,6  ];
   return (
     <Card className={cx(styles.root, shadowStyles.root)}>
       <CardMedia
         className={cx(styles.media, mediaStyles.root)}
         image={
-            'https://image-us.samsung.com/SamsungUS/home/audio/galaxy-buds/MB-04-JustWhatYouWantV4.jpg?$cm-g-fb-full-bleed-img-mobile-jpg$'
+            ""
         }
       />
       <CardContent>
         <TextInfoContent
           classes={textCardContentStyles}
-          overline={"title"}
-          heading={"title"}
+          overline={'title'}
+          heading={title[1].titles}
+
           body={
-            'As Goguen is rolling out very soon...'
+            ""
           }
         />
+        <div>
+          <CardContentList title={numbers1}/>
+        </div>
       </CardContent>
     </Card>
   );
-});
+};
 export default MusicCardDemo
