@@ -8,9 +8,9 @@ const Section = styled.section `
     display:flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-content: center;
+    align-items: center;
     position: relative;
-    height: 350px;
+    height: 250px;
     background-color: black;
     color: white;
     
@@ -20,7 +20,7 @@ const StyledLink = styled(Link) `
     margin-right: 30px;
 
     &:hover {
-        color: green;
+        color: #18DF81;
     }
 `
 
