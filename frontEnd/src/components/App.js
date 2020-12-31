@@ -1,16 +1,14 @@
-import React from 'react';
-import {BrowserRouter, Link, Route} from 'react-router-dom';
-import styled, { createGlobalStyle} from 'styled-components';
-import Header from './Header';
-import TransitionSection from './TransitionSection';
-import Showcase from './Showcase.js';
-import StorySection from './StorySection';
-import BlogSection from './BlogSection';
-import FooterSection from './FooterSection';
+import React from "react";
+import { BrowserRouter, Link, Route } from "react-router-dom";
+import styled, { createGlobalStyle } from "styled-components";
+import Header from "./Header";
+import TransitionSection from "./TransitionSection";
+import Showcase from "./Showcase.js";
+import StorySection from "./StorySection";
+import BlogSection from "./BlogSection";
+import FooterSection from "./FooterSection";
 
-
-
-const GlobalStyle = createGlobalStyle `
+const GlobalStyle = createGlobalStyle`
 
     * {
         box-sizing: border-box;
@@ -36,23 +34,22 @@ const GlobalStyle = createGlobalStyle `
     }
 
     
-`
-
+`;
 
 const App = () => {
-    return (
-        <div>
-            <GlobalStyle />
-            <BrowserRouter>
-            <Header />
-            <TransitionSection />
-            <Showcase />
-            <StorySection />
-            <BlogSection />
-            <FooterSection />
-            </BrowserRouter>
-        </div>
-    )
-}
+  return (
+    <div>
+      <GlobalStyle />
+      <BrowserRouter>
+        <Header />
+        <TransitionSection />
+        <Showcase />
+        <StorySection />
+        <BlogSection />
+        <FooterSection />
+      </BrowserRouter>
+    </div>
+  );
+};
 
 export default App;

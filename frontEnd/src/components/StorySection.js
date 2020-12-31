@@ -9,7 +9,6 @@ const Section = styled.section`
   align-content: center;
   position: relative;
   padding: 5% 0% 5% 0%;
-
 `;
 
 const Div = styled.div`
@@ -17,11 +16,11 @@ const Div = styled.div`
 `;
 
 const Div2 = styled.div`
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: black;
-
-`
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #000;
+  line-height: 1.9;
+`;
 
 const Content = styled.div`
   display: flex;
@@ -46,16 +45,36 @@ const Img = styled.img`
 `;
 
 const H1 = styled.h1`
-  font-size: 3rem;
+  font-size: 3.3rem;
   font-weight: 600;
 `;
 
 const H2 = styled.h2`
-text-transform: uppercase;
-color: #18DF81;
-border-bottom: 2px solid #18DF81;
-margin-bottom: 1.4rem;
-`
+  text-transform: uppercase;
+  color: #18df81;
+  border-bottom: 2px solid #18df81;
+  margin-bottom: 1.4rem;
+`;
+
+const P = styled.p`
+  font-weight: 900;
+`;
+
+const Button = styled.button`
+  margin-top: 2rem;
+  max-width: 200px;
+  height: 50px;
+  color: #18df81;
+  border: 2px solid #18df81;
+  background-color: #fff;
+  font-weight: 900;
+
+  &:hover {
+    transition: 0.2s;
+    background-color: #18df81;
+    color: #fff;
+  }
+`;
 
 const StorySection = () => {
   return (
@@ -70,33 +89,37 @@ const StorySection = () => {
               <H1>Obsessed With Blockchain</H1>
             </div>
             <Div2>
-              <p><b>I lost money in 2017. </b></p>
+              <P>I lost money in 2017.</P>
 
               <p>
                 Like many people, that was my first entry into cryptocurrencies.{" "}
               </p>
 
               <p>
-                But since then, I have discovered my passion for this technology and decided
-                to specialize in every faucet of this industry.
+                But since then, I have discovered my passion for this technology
+                and decided to specialize in every faucet of this industry.
               </p>
 
               <p>
-                I'm a Full Stack Solidity Developer working to help bring exciting innovations
-                to the world!{" "}
+                I'm a Full Stack Solidity Developer working to help bring
+                exciting innovations to the world!{" "}
               </p>
 
               <p>
-                As a copywriter and a developer I'm also able to develop DApps and comminucate clealy the business and economic
-                value of the technology for everyone to understand easily.{" "}
+                As a copywriter and a developer I'm also able to develop DApps
+                and comminucate clealy the business and economic value of the
+                technology for everyone to understand easily.{" "}
               </p>
 
               <p>
                 {" "}
-                If you want to have a friendly chat - click the button below and schedule
-                a time suitable for you! {" "}
+                If you want to have a friendly chat - click the button below and
+                schedule a time suitable for you!{" "}
               </p>
             </Div2>
+            <Button>
+              Book Here <i class="fas fa-chevron-right"></i>
+            </Button>
           </Content>
         </Div>
         <ImgDiv>

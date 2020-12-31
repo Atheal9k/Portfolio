@@ -1,8 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled, {keyframes} from 'styled-components'
-
-
+import React from "react";
+import { Link } from "react-router-dom";
+import styled, { keyframes } from "styled-components";
 
 const textAnimation = keyframes`
    0%,10%,100%
@@ -15,42 +13,38 @@ const textAnimation = keyframes`
    }
 
 
-`
+`;
 
 const HeaderSection = styled.header`
-    background: url('/images/pattern.jpg') no-repeat center center/cover;
-    //background-color: black;
-    height: 100vh;
-    position: sticky;
-    background-attachment: fixed;
+  background: url("/images/pattern.jpg") no-repeat center center/cover;
+  height: 100vh;
+  position: sticky;
+  background-attachment: fixed;
 
-    &:before {
-        content: '';
-        position: absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background: rgba(0,0,0,0.4);
-    }
-    
-    
-`
-const Div = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: none;
-    color: #fff;
-    
-    opacity: 0.8;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 70px;
-    position: relative;
-    top: 0px;
-    padding: 0 30px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+  }
+`;
+const Div = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none;
+  color: #fff;
 
-`
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: relative;
+  top: 0px;
+  padding: 0 30px;
+`;
 
 const StyledLink = styled(Link)`
     padding: 10px 20px;
@@ -62,30 +56,29 @@ const StyledLink = styled(Link)`
         text-decoration: none;
     }
 
-`
-const Ul = styled.ul `
-    display:flex;
+`;
+const Ul = styled.ul`
+  display: flex;
+`;
 
-`
-
-const H1 = styled.h1 `
-    font-weight: 300;
-    line-height: 1.2;
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    cursor: pointer;
-`
-const Div2 = styled.div `
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    padding: 0 20px;
-    color: #fff;
-`
-const HH1 = styled.h1 `
+const H1 = styled.h1`
+  font-weight: 300;
+  line-height: 1.2;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  cursor: pointer;
+`;
+const Div2 = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+  color: #fff;
+`;
+const HH1 = styled.h1`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,32 +109,35 @@ const HH1 = styled.h1 `
       
    }
 
-`
-
-
+`;
 
 const Header = () => {
-    return (
-        <React.Fragment>
-            <HeaderSection>
-                <Div>
-                    <H1>Victor Huang</H1>
-                    <nav>
-                        <Ul>
-                            <li><StyledLink to="#">Project Showcase</StyledLink></li>
-                            <li><StyledLink to="#">My Story</StyledLink></li>
-                            <li><StyledLink to="#">Contact Me</StyledLink></li>
-                        </Ul>
-                    </nav>
-                </Div>
+  return (
+    <React.Fragment>
+      <HeaderSection>
+        <Div>
+          <H1>Victor Huang</H1>
+          <nav>
+            <Ul>
+              <li>
+                <StyledLink to="#lol">Project Showcase</StyledLink>
+              </li>
+              <li>
+                <StyledLink to="#">My Story</StyledLink>
+              </li>
+              <li>
+                <StyledLink to="#">Contact Me</StyledLink>
+              </li>
+            </Ul>
+          </nav>
+        </Div>
 
-                <Div2>
-                    <HH1>Welcome</HH1>
-
-                </Div2>
-            </HeaderSection>
-        </React.Fragment>
-    )
-}
+        <Div2>
+          <HH1>Welcome</HH1>
+        </Div2>
+      </HeaderSection>
+    </React.Fragment>
+  );
+};
 
 export default Header;
