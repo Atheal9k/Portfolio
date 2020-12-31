@@ -27,8 +27,11 @@ background-color: black;
 
 const H1 = styled.h1 `
     margin-top: 3.5rem;
-
-
+    color: #18DF81;
+    font-weight: 400;
+    letter-spacing: 1.2rem;
+    border-bottom: 2px solid #18DF81;
+    padding-bottom: 0;
 `
 
 
@@ -40,7 +43,7 @@ const Showcase = () => {
         <div>
             <Div>
                 <H1>
-                    Blockchain Projects ShowCase
+                    Blockchain Projects Showcase
                 </H1>
             </Div>
             <Section>

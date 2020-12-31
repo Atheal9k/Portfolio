@@ -39,8 +39,8 @@ const SyledCard = styled(Card)`
 const cardInfo = [
   { image: eth2, title: "What Is Ethereum 2.0?", text: "The next generation of Eth 2.0 is coming..." , link: ""},
   { image: arbitrage, title: "Crypto Arbitraging", text: "Learn about different methods and Flash Loans..." , link: ""},
-  { image: hyperledger, title: "Hyperledger's in Crypto", text: "Understanding Hyperledger..." , link: ""},
-  { image: goguen, title: "The Dawn Of Cardano", text: "What to expect as Cardano's Goguen Era rolls out..." , link: ""},
+  { image: hyperledger, title: "Hyperledger's in Crypto", text: "Understanding Hyperledger..." , link: "https://www.hyperledger.org/blog/2020/11/24/blockchain-education-the-keys-to-the-door-of-a-new-business-revolution"},
+  { image: goguen, title: "The Dawn Of Cardano", text: "What to expect as Cardano's Goguen Era rolls out..." , link: "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion"},
 ];
 
 const renderCard = (card, index) => {

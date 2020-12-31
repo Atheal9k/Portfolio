@@ -50,7 +50,7 @@ const Img = styled.img `
 `
 
 const Div = styled.div `
-     height: 600px;
+     height: 500px;
 `
 
 

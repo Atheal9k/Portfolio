@@ -16,6 +16,13 @@ const Div = styled.div`
   width: 35%;
 `;
 
+const Div2 = styled.div`
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: black;
+
+`
+
 const Content = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,6 +50,13 @@ const H1 = styled.h1`
   font-weight: 600;
 `;
 
+const H2 = styled.h2`
+text-transform: uppercase;
+color: #18DF81;
+border-bottom: 2px solid #18DF81;
+margin-bottom: 1.4rem;
+`
+
 const StorySection = () => {
   return (
     <div>
@@ -50,35 +64,34 @@ const StorySection = () => {
         <Div>
           <Content>
             <div>
-              <h2>Victor's Story</h2>
+              <H2>Victor's Story</H2>
             </div>
             <div>
-              <H1>NO EXCUSES</H1>
+              <H1>Obsessed With Blockchain</H1>
             </div>
-            <div>
-              <p>I was a punk kid. </p>
+            <Div2>
+              <p><b>I lost money in 2017. </b></p>
 
               <p>
-                I grew up in Hong Kong with enough money supplied by my Dad to
-                always have $100 in my pocket.{" "}
+                Like many people, that was my first entry into cryptocurrencies.{" "}
               </p>
 
               <p>
-                I had zero ambition. I was not interested in success. But my
-                parents divorced when I was 14, and everything changed.
+                But since then, I have discovered my passion for this technology and decided
+                to specilize in every faucet of this industry.
               </p>
 
               <p>
-                My mom and I immigrated to a bad neighborhood in Vancouver and a
-                low-rent, one-room apartment.{" "}
+                I'm a Full Stack Solidity Developer working to help bring exciting innovations
+                to the world!{" "}
               </p>
 
               <p>
                 {" "}
-                My bed was a sleeping bag. And suddenly, no more money in my
-                pocket!{" "}
+                If you want to have a friendly chat - click the button below and schedule
+                a time suitable for you! {" "}
               </p>
-            </div>
+            </Div2>
           </Content>
         </Div>
         <ImgDiv>

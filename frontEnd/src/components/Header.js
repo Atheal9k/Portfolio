@@ -1,13 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
+
+
+
+const textAnimation = keyframes`
+   0%,10%,100%
+   {
+       width:0;
+   }
+   70%,90%
+   {
+       width: 100%;
+   }
+
+
+`
 
 const HeaderSection = styled.header`
-    background: url('/images/night.jpg') no-repeat center center/cover;
+    background: url('/images/pattern.jpg') no-repeat center center/cover;
     //background-color: black;
     height: 100vh;
     position: sticky;
     background-attachment: fixed;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(0,0,0,0.4);
+    }
     
     
 `
@@ -17,7 +42,7 @@ const Div = styled.div`
     align-items: center;
     background-color: none;
     color: #fff;
-    text-shadow: 0 0 10px #fff;
+    
     opacity: 0.8;
     width: 100%;
     height: 70px;
@@ -33,7 +58,8 @@ const StyledLink = styled(Link)`
  
 
     &:hover{
-        color: green;
+        color: #01fe87;
+        text-decoration: none;
     }
 
 `
@@ -45,6 +71,9 @@ const Ul = styled.ul `
 const H1 = styled.h1 `
     font-weight: 300;
     line-height: 1.2;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
 `
 const Div2 = styled.div `
     display: flex;
@@ -60,23 +89,35 @@ const HH1 = styled.h1 `
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     position:absolute;
      
-    transition: 0.8s;
-    font-size: 7rem;
-    letter-spacing: 5px;
+    letter-spacing: 1.6rem;
+    font-size: 14vw
     font-weight: 500;
-    color: #fff;
-    text-shadow: 0 0 10px #fff;
-        0 0 20px #fff;
-        0 0 40px #fff;
-        0 0 80px #fff;
-        0 0 120px #fff;
-        0 0 160px #fff;
-   
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+    
+   &:before {
+       content: "Welcome";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       color: #01fe87;
+       -webkit-text-stroke: 0vw #383d52;
+       border-right: 2px solid #01fe87;
+       overflow: hidden;
+       animation-name: ${textAnimation};
+       animation-duration: 6s;
+       animation-timing-function: linear;
+       animation-iteration-count: infinite;
+      
+   }
 
 `
+
 
 
 const Header = () => {
@@ -95,8 +136,8 @@ const Header = () => {
                 </Div>
 
                 <Div2>
-                    <HH1>Welcome To Victor's Portfolio</HH1>
-                    
+                    <HH1>Welcome</HH1>
+
                 </Div2>
             </HeaderSection>
         </React.Fragment>
