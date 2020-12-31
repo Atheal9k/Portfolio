@@ -9,6 +9,7 @@ import BlogSection from './BlogSection';
 import FooterSection from './FooterSection';
 
 
+
 const GlobalStyle = createGlobalStyle `
 
     * {

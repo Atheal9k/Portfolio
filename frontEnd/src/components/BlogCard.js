@@ -1,63 +1,35 @@
-import React from 'react';
-import cx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import TextInfoContent from '@mui-treasury/components/content/textInfo';
-import { useFourThreeCardMediaStyles } from '@mui-treasury/styles/cardMedia/fourThree';
-import { useN04TextInfoContentStyles } from '@mui-treasury/styles/textInfoContent/n04';
-import { useOverShadowStyles } from '@mui-treasury/styles/shadow/over';
+import React from "react";
+import { Card, Button } from "react-bootstrap";
 
+function BlogCard() {
 
-const useStyles = makeStyles(() => ({
-  root: {
-    maxWidth: 343,
-    margin: 'auto',
-    borderRadius: 12,
-    padding: 12,
-  },
-  media: {
-    borderRadius: 6,
-  },
-}));
+  const cardInfo = [
+    { image: "", title: "aaa", text: ""},
+    { image: "", title: "bbb", text: ""},
+    { image: "", title: "ccc", text: ""},
+    { image: "", title: "ddd", text: ""},
+  ]
 
-export const MusicCardDemo = ({title}) => {
-  const styles = useStyles();
-  const mediaStyles = useFourThreeCardMediaStyles();
-  const textCardContentStyles = useN04TextInfoContentStyles();
-  const shadowStyles = useOverShadowStyles({ inactive: true });
-
-  console.log(title)
-
-  const CardContentList = (title) => {
-    const listItems = title.map((number) => <div>{number}</div>)
-    return <div>{listItems}</div>
+  const renderCard = (card, index) => {
+    return (
+      <Card style={{ width: "18rem" }} key={index}>
+        <Card.Img variant="top" src="holder.js/100px180" />
+        <Card.Body>
+          <Card.Title>{card.title}</Card.Title>
+          <Card.Text>
+            {card.text}
+          </Card.Text>
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
+    )
   }
-  const numbers1 = [1, 2, 3, 4, 5,6  ];
-  return (
-    <Card className={cx(styles.root, shadowStyles.root)}>
-      <CardMedia
-        className={cx(styles.media, mediaStyles.root)}
-        image={
-            ""
-        }
-      />
-      <CardContent>
-        <TextInfoContent
-          classes={textCardContentStyles}
-          overline={'title'}
-          heading={title[1].titles}
 
-          body={
-            ""
-          }
-        />
-        <div>
-          <CardContentList title={numbers1}/>
-        </div>
-      </CardContent>
-    </Card>
+  return (
+    <div>
+      {cardInfo.map(renderCard)}
+    </div>
   );
-};
-export default MusicCardDemo
+}
+
+export default BlogCard;

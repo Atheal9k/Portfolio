@@ -1,95 +1,80 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import { Assessment } from "@material-ui/icons";
-import BlogCard from './BlogCard';
-import ada from '../resources/ada-logo.png';
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import arbitrage from "../resources/arbitrage.jpg";
+import goguen from "../resources/goguen.jpg";
+import hyperledger from "../resources/hyperledger.jpg";
+import eth2 from "../resources/eth2.png";
+import { Card, Button} from "react-bootstrap";
 
-const useStyles = makeStyles((theme) => ({
-    container: {
-      marginTop: 30,
-      display: 'flex',
-      justifyContent: 'center',
-      alignContent: 'center',
-    },
-  
-    card: {},
-  }));
-
-  const gridProp = [
-    {xs: '12', sm:'6', md:'4'},
-    {xs: '12', sm:'6', md:'4'},
-    {xs: '12', sm:'6', md:'4'},
-    {xs: '12', sm:'6', md:'4'},
-    {xs: '12', sm:'6', md:'4'},
-    {xs: '12', sm:'6', md:'4'},
-
-  ]
-
-  const cardContent = [
-    {titles: 'hello'},
-    {titles: 'goodbye'}
-  ]
-
-const Section = styled.section `
-    display:flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    position: relative;
-    
-    
-`
-const Div = styled.div `
-  display:flex;
+const StyledContainer = styled.div`
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-content: flex-start;
-  
-  
-`
-const DivWrapper = styled.div `
-  
-  
-`
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+`;
 
-const GridContainer = styled.div `
+const Div2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   
-  
+`;
 
-`
+const SyledCard = styled(Card)`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+`;
 
+const cardInfo = [
+  { image: eth2, title: "What Is Ethereum 2.0?", text: "The next generation of Eth 2.0 is coming..." , link: ""},
+  { image: arbitrage, title: "Crypto Arbitraging", text: "Learn about different methods and Flash Loans..." , link: ""},
+  { image: hyperledger, title: "Hyperledger's in Crypto", text: "Understanding Hyperledger..." , link: ""},
+  { image: goguen, title: "The Dawn Of Cardano", text: "What to expect as Cardano's Goguen Era rolls out..." , link: ""},
+];
+
+const renderCard = (card, index) => {
+  return (
+    <SyledCard style={{ width: "18rem" }} key={index}>
+      <Card.Img variant="top" src={card.image} />
+      <Card.Body>
+        <Card.Title>{card.title}</Card.Title>
+        <Card.Text>{card.text}</Card.Text>
+        <Button variant="primary" href={card.link}>Read More</Button>
+      </Card.Body>
+    </SyledCard>
+  );
+};
 
 const BlogSection = () => {
-    const classes = useStyles();
+  return (
+    <div>
+      <StyledContainer>
+        <section>
+          <div>
+            <div>
+              <h2>Learn About Cryptocurrency</h2>
+            </div>
+            <div>
+              <h1>Articles Written By Victor</h1>
+            </div>
+          </div>
+        </section>
 
-    return (
-        <DivWrapper>
-            <Section> 
-                <Div>
-                <div>
-                <h2>Learn About Cryptocurrency</h2>
-                </div>
-                <div>
-                <h1>Articles Written By Victor</h1>  
-                </div>
-                </Div>
-                
-            </Section>
-            <GridContainer>
-            <Grid container spacing={3} className={classes.container}>
-        
-        {gridProp.map((grids) => <Grid item xs={grids.xs} sm={grids.sm} md={grids.md}> 
-        <BlogCard title={cardContent}/> 
-        </Grid> )}
+        <Div2>{cardInfo.map(renderCard)}</Div2>
+      </StyledContainer>
+    </div>
+  );
+};
 
-      </Grid>
-      </GridContainer>
-        </DivWrapper>
-        
-    )
-}
-
-export default BlogSection
+export default BlogSection;

@@ -19,7 +19,10 @@ import { useCoverCardMediaStyles } from '@mui-treasury/styles/cardMedia/cover';
 
 
 const DivCards = styled.div `
-  
+    
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 2rem;
     &:hover {
       opacity: 0.5;
 
@@ -45,15 +48,15 @@ const useStyles = makeStyles(() => ({
       boxShadow: 'none',
       position: 'relative',
       minWidth: 450,
-      minHeight: 850,
-      marginLeft: 15,
-      
+      minHeight: "100%",
+      borderRadius: 0,
+
       '&:after': {
         content: '""',
         display: 'block',
         position: 'absolute',
         width: '100%',
-        height: '64%',
+        height: '10%',
         bottom: 0,
         zIndex: 1,
         background: 'linear-gradient(to top, #000, rgba(0,0,0,0))',
