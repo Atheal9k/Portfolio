@@ -36,9 +36,21 @@ const SyledCard = styled(Card)`
   margin-right: 15px;
 `;
 
+const H1 = styled.h1`
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 1.1rem;
+  border-bottom: 2px solid #18DF81;
+`;
+
+const H2 = styled.h2`
+  text-align:center;
+
+`
+
 const cardInfo = [
   { image: eth2, title: "What Is Ethereum 2.0?", text: "The next generation of Eth 2.0 is coming..." , link: ""},
-  { image: arbitrage, title: "Crypto Arbitraging", text: "Learn about different methods and Flash Loans..." , link: ""},
+  { image: arbitrage, title: "Crypto Arbitraging", text: "Learn about different methods of Arbitrage and Crazy Flash Loans..." , link: ""},
   { image: hyperledger, title: "Hyperledger's in Crypto", text: "Understanding Hyperledger..." , link: "https://www.hyperledger.org/blog/2020/11/24/blockchain-education-the-keys-to-the-door-of-a-new-business-revolution"},
   { image: goguen, title: "The Dawn Of Cardano", text: "What to expect as Cardano's Goguen Era rolls out..." , link: "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion"},
 ];
@@ -50,7 +62,7 @@ const renderCard = (card, index) => {
       <Card.Body>
         <Card.Title>{card.title}</Card.Title>
         <Card.Text>{card.text}</Card.Text>
-        <Button variant="primary" href={card.link}>Read More</Button>
+        <Button variant="primary" href={card.link} target='_blank' >Read More</Button>
       </Card.Body>
     </SyledCard>
   );
@@ -63,10 +75,10 @@ const BlogSection = () => {
         <section>
           <div>
             <div>
-              <h2>Learn About Cryptocurrency</h2>
+              <H2>Learn About Cryptocurrency</H2>
             </div>
             <div>
-              <h1>Articles Written By Victor</h1>
+              <H1>Articles Written By Victor</H1>
             </div>
           </div>
         </section>

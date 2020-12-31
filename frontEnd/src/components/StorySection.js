@@ -78,12 +78,17 @@ const StorySection = () => {
 
               <p>
                 But since then, I have discovered my passion for this technology and decided
-                to specilize in every faucet of this industry.
+                to specialize in every faucet of this industry.
               </p>
 
               <p>
                 I'm a Full Stack Solidity Developer working to help bring exciting innovations
                 to the world!{" "}
+              </p>
+
+              <p>
+                As a copywriter and a developer I'm also able to develop DApps and comminucate clealy the business and economic
+                value of the technology for everyone to understand easily.{" "}
               </p>
 
               <p>
