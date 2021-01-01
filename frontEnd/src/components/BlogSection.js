@@ -50,6 +50,13 @@ const StyledButton = styled(Button)`
   }
 `;
 
+const StyledImg = styled(Card.Img)`
+width: 100%;
+height: 18vh;
+object-fit: cover;
+
+`
+
 const H1 = styled.h1`
   font-size: 3rem;
   font-weight: 600;
@@ -88,12 +95,40 @@ const cardInfo = [
     link:
       "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
   },
+  {
+    image: goguen,
+    title: "The Dawn Of Cardano",
+    text: "What to expect as Cardano's Goguen Era rolls out...",
+    link:
+      "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
+  },
+  {
+    image: goguen,
+    title: "The Dawn Of Cardano",
+    text: "What to expect as Cardano's Goguen Era rolls out...",
+    link:
+      "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
+  },
+  {
+    image: goguen,
+    title: "The Dawn Of Cardano",
+    text: "What to expect as Cardano's Goguen Era rolls out...",
+    link:
+      "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
+  },
+  {
+    image: goguen,
+    title: "The Dawn Of Cardano",
+    text: "What to expect as Cardano's Goguen Era rolls out...",
+    link:
+      "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
+  },
 ];
 
 const renderCard = (card, index) => {
   return (
-    <SyledCard style={{ width: "18rem" }} key={index}>
-      <Card.Img variant="top" src={card.image} />
+    <SyledCard style={{ width: "18rem" }} key={index} >
+      <StyledImg variant="top" src={card.image} />
       <Card.Body>
         <Card.Title>{card.title}</Card.Title>
         <Card.Text>{card.text}</Card.Text>

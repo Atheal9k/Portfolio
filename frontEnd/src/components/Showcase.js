@@ -13,6 +13,7 @@ const Section = styled.section`
   position: relative;
   background-color: black;
   height: 85vh;
+  border-bottom: 1px solid #01fe87;
 `;
 
 const Div = styled.div`
@@ -43,12 +44,14 @@ const Showcase = () => {
           subtitle={"Auto Yielding Interest"}
           caption={"DeFi"}
           images={compoundImage}
+          description={"This wallet interacts with the Compound Finance Protocal by sending Dai To Compound To Mint cDAI. Users with cDAI will be earning interest every block. When they redeem their cDAI back for DAI, users will receive more Dai than their initial balance."}
         />
         <ShowcaseCards
           title={"PayTrust"}
           subtitle={"Backed By Blockchain"}
           caption={"Escrow"}
           images={airPlane}
+          description={"An escrow like service for the Travel industry. Users can deposit Ethereum to receive Flight Tokens - which will give them the right to redeem or refund the tokens anytime within their unique deadlines."}
         />
         <ShowcaseCards />
       </Section>

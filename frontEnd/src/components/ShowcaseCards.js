@@ -20,23 +20,17 @@ const DivCards = styled.div`
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   margin-top: 2rem;
+  transition: 0.5;
   &:hover {
-    opacity: 0.5;
+    opacity: 1;
 
     ${(props) =>
       props.content &&
       css`
         opacity: 1;
-        padding-bottom: 50px;
       `}
   }
 `;
-const DivContentShift = styled.div`
-  &:hover {
-    padding-bottom: 50px;
-  }
-`;
-
 const useStyles = makeStyles(() => ({
   card: {
     boxShadow: "none",
@@ -44,27 +38,53 @@ const useStyles = makeStyles(() => ({
     minWidth: 450,
     minHeight: "100%",
     borderRadius: 0,
+    border: "1px solid #171717",
+    
+    marginBottom: "1.2rem",
 
     "&:after": {
       content: '""',
       display: "block",
       position: "absolute",
       width: "100%",
-      height: "10%",
+      height: "15%",
       bottom: 0,
       zIndex: 1,
-      background: "linear-gradient(to top, #000, rgba(0,0,0,0))",
+      background: "linear-gradient(to top, #000, rgba(1,254,135,0))",
     },
+
   },
   content: {
     position: "absolute",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "flex-end",
     zIndex: 2,
-    bottom: 0,
+    bottom: "-160px",
     width: "100%",
+    height: "100%",
+    padding: 20,
+    opacity: 0,
+    transition: "bottom 0.5s",
+    backdropFilter: "blur(0px)",
+
+    "&:hover": {
+      backdropFilter: "blur(15px)",
+      bottom: 0,
+      opacity: 1,
+      background: "rgba(0, 0, 0, 0.4)",
+    }
   },
 }));
 
-export const ShowcaseCards = ({ images, title, subtitle, caption }) => {
+const H6 = styled.h6`
+  color: #fff;
+  line-height: 2rem;
+
+`
+
+export const ShowcaseCards = ({ images, title, subtitle, caption, description }) => {
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: "top" });
   const styles = useStyles();
   return (
@@ -87,6 +107,7 @@ export const ShowcaseCards = ({ images, title, subtitle, caption }) => {
                 <InfoSubtitle>{subtitle}</InfoSubtitle>
                 <InfoTitle>{title}</InfoTitle>
                 <InfoCaption>{caption}</InfoCaption>
+                <H6>{description}</H6>
               </Info>
             </DivCards>
           </Box>
@@ -97,26 +118,3 @@ export const ShowcaseCards = ({ images, title, subtitle, caption }) => {
 };
 export default ShowcaseCards;
 
-// const ShowcaseCards = () => {
-//     return (
-//         <>
-//             <DivCards>
-//             <article>
-//                 <img />
-//                 <p>content</p>
-//             </article>
-//             <article>
-//                 <p>content</p>
-//             </article>
-//             <article>
-//                 <p>content</p>
-//             </article>
-//             <article>
-//                 <p>content</p>
-//             </article>
-//             </DivCards>
-//         </>
-//     )
-// }
-
-// export default ShowcaseCards
