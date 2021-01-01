@@ -78,13 +78,35 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
+const StyledImg = styled(CardMedia)`
+  object-fit:cover;
+
+`
+
 const H6 = styled.h6`
   color: #fff;
   line-height: 2rem;
 
 `
 
-export const ShowcaseCards = ({ images, title, subtitle, caption, description }) => {
+const Div2 = styled.div`
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
+
+`
+
+const A = styled.a `
+  &:hover {
+    color: #01fe87;
+    text-decoration: none;
+  }
+
+`
+
+export const ShowcaseCards = ({ images, title, subtitle, caption, description, github, website }) => {
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: "top" });
   const styles = useStyles();
   return (
@@ -99,7 +121,7 @@ export const ShowcaseCards = ({ images, title, subtitle, caption, description })
       </NoSsr>
       <DivCards>
         <Card className={styles.card}>
-          <CardMedia classes={mediaStyles} image={images} />
+          <StyledImg classes={mediaStyles} image={images} />
 
           <Box py={3} px={2} className={styles.content}>
             <DivCards content>
@@ -108,6 +130,11 @@ export const ShowcaseCards = ({ images, title, subtitle, caption, description })
                 <InfoTitle>{title}</InfoTitle>
                 <InfoCaption>{caption}</InfoCaption>
                 <H6>{description}</H6>
+                <Div2>
+                <A href={github} target="_blank"><i class="fab fa-github fa-2x"></i></A>
+                <A href={website} target="_blank"><h3>Link To Site <i class="fas fa-chevron-right"></i></h3></A>
+                </Div2>
+                
               </Info>
             </DivCards>
           </Box>
