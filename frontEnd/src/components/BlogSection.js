@@ -4,6 +4,10 @@ import styled from "styled-components";
 import arbitrage from "../resources/arbitrage.jpg";
 import goguen from "../resources/goguen.jpg";
 import hyperledger from "../resources/hyperledger.jpg";
+import binance from "../resources/binance.jpg";
+import mining from "../resources/mining.jpg";
+import hack from "../resources/hack.png";
+import privacy from "../resources/bitcoin-privacy.jpg";
 import eth2 from "../resources/eth2.png";
 import { Card, Button } from "react-bootstrap";
 
@@ -21,6 +25,7 @@ const Div2 = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 75%;
 `;
 
 const SyledCard = styled(Card)`
@@ -79,7 +84,7 @@ const cardInfo = [
     image: arbitrage,
     title: "Crypto Arbitraging",
     text: "Learn about different methods of Arbitrage and Crazy Flash Loans...",
-    link: "",
+    link: "https://coincompanion.io/learn/crypto-arbitrage/",
   },
   {
     image: hyperledger,
@@ -96,30 +101,30 @@ const cardInfo = [
       "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
   },
   {
-    image: goguen,
-    title: "The Dawn Of Cardano",
-    text: "What to expect as Cardano's Goguen Era rolls out...",
+    image: binance,
+    title: "Binance Exchange Review",
+    text: "An in-depth review on Binance...",
+    link:
+      "https://coincompanion.io/exchanges/binance-review/",
+  },
+  {
+    image: mining,
+    title: "How Long Does It Take To Mine 1 Bitcoin?",
+    text: "Understand how Bitcoin mining works and what it looks like in 2020...",
+    link:
+      "https://coincompanion.io/learn/how-long-does-it-take-to-mine-1-bitcoin/",
+  },
+  {
+    image: hack,
+    title: "Is Bitcoin Hackable?",
+    text: "Discover what makes the Bitcoin Protocol so resistant to hacks and malicious actors...",
     link:
       "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
   },
   {
-    image: goguen,
-    title: "The Dawn Of Cardano",
-    text: "What to expect as Cardano's Goguen Era rolls out...",
-    link:
-      "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
-  },
-  {
-    image: goguen,
-    title: "The Dawn Of Cardano",
-    text: "What to expect as Cardano's Goguen Era rolls out...",
-    link:
-      "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
-  },
-  {
-    image: goguen,
-    title: "The Dawn Of Cardano",
-    text: "What to expect as Cardano's Goguen Era rolls out...",
+    image: privacy,
+    title: "Is Bitcoin Tracable?",
+    text: "What really is anonymous on the Bitcoin Network and What Can Be Done To Ensure Your Privacy...",
     link:
       "https://emurgo.io/blog/highly-anticipated-goguen-era-release-pushes-cardano-closer-to-completion",
   },

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ShowcaseCards from "./ShowcaseCards";
 import compoundImage from "../resources/compound.jpg";
 import airPlane from "../resources/plane.jpg";
+import aave from "../resources/aave.PNG";
 
 const Section = styled.section`
   display: flex;
@@ -49,7 +50,7 @@ const Showcase = () => {
           website={"https://compound-wallet.vercel.app/"}
         />
         <ShowcaseCards
-          title={"PayTrust"}
+          title={"Travel Trust Pay"}
           subtitle={"Backed By Blockchain"}
           caption={"Escrow"}
           images={airPlane}
@@ -57,7 +58,15 @@ const Showcase = () => {
           github={"https://github.com/Atheal9k/"}
           website={"https://travel-trustpay.vercel.app/"}
         />
-        <ShowcaseCards />
+        <ShowcaseCards 
+                  title={"Flash Loans"}
+                  subtitle={"No Collateral Loans"}
+                  caption={"DeFi"}
+                  images={aave}
+                  description={"Utilizing the AAVE protocol to instantly borrow any amounts of money without collateral and then returning it back to AAVE after a profit."}
+                  github={"https://github.com/Atheal9k/"}
+                  website={"https://travel-trustpay.vercel.app/"}
+        />
       </Section>
     </div>
   );
