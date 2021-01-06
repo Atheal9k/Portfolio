@@ -79,7 +79,7 @@ const cardInfo = [
     image: eth2,
     title: "What Is Ethereum 2.0?",
     text: "The next generation of Eth 2.0 is coming...",
-    link: "",
+    link: "https://docs.google.com/document/d/1yRL3QbflAzLVRJx2yB05rr5ffoADCPJRwHrsIq3Mqm0/edit?usp=sharing",
   },
   {
     image: arbitrage,
