@@ -80,6 +80,12 @@ const Img = styled.img`
 const H1 = styled.h1`
   font-size: 3.3rem;
   font-weight: 600;
+  ${mediaQueries("sm")`
+    text-align:center;
+  `}
+  ${mediaQueries("md")`
+    text-align:center;
+  `}
 `;
 
 const H2 = styled.h2`
@@ -87,6 +93,9 @@ const H2 = styled.h2`
   color: #18df81;
   border-bottom: 2px solid #18df81;
   margin-bottom: 1.4rem;
+  ${mediaQueries("sm")`
+    text-align:center;
+  `}
 `;
 
 const P = styled.p`

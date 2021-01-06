@@ -67,6 +67,8 @@ const StyledLink = styled(Link)`
 `;
 const Ul = styled.ul`
   display: flex;
+  text-align:center;
+  flex-wrap:wrap;
 `;
 
 const H1 = styled.h1`

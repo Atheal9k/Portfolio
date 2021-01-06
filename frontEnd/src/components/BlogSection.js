@@ -67,6 +67,7 @@ const H1 = styled.h1`
   font-weight: 600;
   padding: 1.1rem;
   border-bottom: 2px solid #18df81;
+  text-align:center;
 `;
 
 const H2 = styled.h2`

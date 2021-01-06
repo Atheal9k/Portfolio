@@ -5,6 +5,7 @@ import ShowcaseCards from "./ShowcaseCards";
 import compoundImage from "../resources/compound.jpg";
 import airPlane from "../resources/plane.jpg";
 import aave from "../resources/aave.PNG";
+import { mediaQueries } from "./mediaQueries";
 
 
 const Section = styled.section`
@@ -25,6 +26,10 @@ const Section = styled.section`
   &::-webkit-scrollbar {
     display:none;
   }
+
+  ${mediaQueries("lg")`
+  
+  `}
 `;
 
 const Div = styled.div`
@@ -46,38 +51,13 @@ const H1 = styled.h1`
 
 const Showcase = () => {
 
-  const carouselRef = useRef(null)
-  var scrollAmount = 0;
-  var scrollPerClick;
-
-  const scrollLeft = () => {
-    carouselRef.scrollLeft();
-
-    if (scrollAmount < 0) {
-      scrollAmount = 0
-    }
-    console.log("Scroll Amount: ", scrollAmount);
-  }
-
-  const scrollRight = () => {
-    if (scrollAmount <= carouselRef.scrollWidth - carouselRef.clientWidth) {
-      carouselRef.scrollTo({
-        top: 0,
-        left: (scrollAmount += scrollPerClick),
-        behavior: "smooth",
-      })
-    }
-    
-    console.log("Scroll Amount: ", scrollAmount);
-  }
-
 
   return (
     <div id="showcase">
       <Div>
         <H1>Blockchain Projects Showcase</H1>
       </Div>
-      <Section ref={carouselRef}>
+      <Section>
         <ShowcaseCards
           title={"Compound Wallet"}
           subtitle={"Auto Yielding Interest"}
