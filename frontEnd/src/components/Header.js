@@ -1,5 +1,5 @@
 import React from "react";
-//import { Link } from "react-scroll";
+import { HashLink as Link } from "react-router-hash-link";
 import styled, { keyframes } from "styled-components";
 import { mediaQueries } from "./mediaQueries";
 
@@ -54,7 +54,7 @@ const Div = styled.div`
   
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
     padding: 10px 20px;
     margin 0 5px;
  
@@ -129,13 +129,13 @@ const Header = () => {
           <nav>
             <Ul>
               <li>
-                <StyledLink to="showcase" >Project Showcase</StyledLink>
+                <StyledLink smooth to="#showcase" >Project Showcase</StyledLink>
               </li>
               <li>
-                <StyledLink href="#story">My Story</StyledLink>
+                <StyledLink smooth to="#story">My Story</StyledLink>
               </li>
               <li>
-                <StyledLink to="#footer">Contact Me</StyledLink>
+                <StyledLink smooth to="#footer">Contact Me</StyledLink>
               </li>
             </Ul>
           </nav>
