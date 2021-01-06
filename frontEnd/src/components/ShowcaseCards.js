@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 //import GoogleFontLoader from 'react-google-font-loader';
@@ -21,6 +21,10 @@ const DivCards = styled.div`
   margin-right: 0.5rem;
   margin-top: 2rem;
   transition: 0.5;
+
+  
+
+
   &:hover {
     opacity: 1;
 
@@ -109,6 +113,22 @@ const A = styled.a `
 export const ShowcaseCards = ({ images, title, subtitle, caption, description, github, website }) => {
   const mediaStyles = useCoverCardMediaStyles({ bgPosition: "top" });
   const styles = useStyles();
+  const [index, setIndex] = useState(0)
+  const [current, setCurrent] = useState(0)
+  
+  
+    const selectCounter = (selectedIndex, e) => {
+      setIndex(selectedIndex)
+    }
+
+    const nextSlide = () => {
+      setCurrent(current === 3 ? 0 : current + 1)
+    }
+
+    const prevSlide = () => {
+      setCurrent(current === 0 ? 3 : current - 1);
+    };
+
   return (
     <>
       <NoSsr>

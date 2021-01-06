@@ -22,8 +22,15 @@ const StyledLink = styled(Link)`
 
 const FooterSection = () => {
   return (
-    <div>
+    <div id="footer">
       <Section>
+        <div>
+          <h4>Contact Information</h4>
+          <ul>
+            <li>v.huang435.@gmail.com</li>
+         
+          </ul>
+        </div>
         <div>
           <StyledLink to="" target="_blank">
             <i class="fab fa-facebook"></i>

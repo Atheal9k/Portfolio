@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { mediaQueries } from "./mediaQueries";
 
 const Section = styled.section`
   display: flex;
@@ -9,10 +10,27 @@ const Section = styled.section`
   align-content: center;
   position: relative;
   padding: 5% 0% 5% 0%;
+
+  ${mediaQueries("lg")`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  `}
 `;
 
 const Div = styled.div`
   width: 35%;
+
+  ${mediaQueries("lg")`
+  width: 80%;
+  `}
+  ${mediaQueries("md")`
+  width: 70%;
+  `}
+  ${mediaQueries("sm")`
+  width: 90%;
+  `}
 `;
 
 const Div2 = styled.div`
@@ -20,6 +38,10 @@ const Div2 = styled.div`
   font-size: 1.5rem;
   color: #000;
   line-height: 1.9;
+
+  ${mediaQueries("md")`
+  font-size: 1.2rem;
+  `}
 `;
 
 const Content = styled.div`
@@ -28,6 +50,8 @@ const Content = styled.div`
   align-self: flex-start;
   justify-content: flex-start;
   width: 100%;
+
+
 `;
 
 const ImgDiv = styled.div`
@@ -38,10 +62,19 @@ const ImgDiv = styled.div`
   width: 50%;
   margin-left: 40px;
   max-height: 1000px;
+
+  ${mediaQueries("lg")`
+
+  `}
 `;
 
 const Img = styled.img`
   max-height: 100%;
+  ${mediaQueries("lg")`
+  margin-top: 1.7rem;
+  object-fit: contain;
+  max-height:30%;
+  `}
 `;
 
 const H1 = styled.h1`
@@ -78,7 +111,7 @@ const Button = styled.button`
 
 const StorySection = () => {
   return (
-    <div>
+    <div id="story">
       <Section>
         <Div>
           <Content>

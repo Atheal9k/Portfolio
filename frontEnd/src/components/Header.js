@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-scroll";
 import styled, { keyframes } from "styled-components";
+import { mediaQueries } from "./mediaQueries";
 
 const textAnimation = keyframes`
    0%,10%,100%
@@ -30,6 +31,8 @@ const HeaderSection = styled.header`
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
   }
+
+  
 `;
 const Div = styled.div`
   display: flex;
@@ -44,9 +47,14 @@ const Div = styled.div`
   position: relative;
   top: 0px;
   padding: 0 30px;
+
+  ${mediaQueries("md")`
+  flex-direction: column;
+  `}
+  
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
     padding: 10px 20px;
     margin 0 5px;
  
@@ -111,6 +119,7 @@ const HH1 = styled.h1`
 
 `;
 
+
 const Header = () => {
   return (
     <React.Fragment>
@@ -120,13 +129,13 @@ const Header = () => {
           <nav>
             <Ul>
               <li>
-                <StyledLink to="#lol">Project Showcase</StyledLink>
+                <StyledLink to="showcase" >Project Showcase</StyledLink>
               </li>
               <li>
-                <StyledLink to="#">My Story</StyledLink>
+                <StyledLink href="#story">My Story</StyledLink>
               </li>
               <li>
-                <StyledLink to="#">Contact Me</StyledLink>
+                <StyledLink to="#footer">Contact Me</StyledLink>
               </li>
             </Ul>
           </nav>
