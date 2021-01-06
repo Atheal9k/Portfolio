@@ -118,6 +118,26 @@ const Button = styled.button`
   }
 `;
 
+const A = styled.a `
+  text-decoration: none;
+  margin-top: 2rem;
+  max-width: 200px;
+  height: 50px;
+  color: #18df81;
+  border: 2px solid #18df81;
+  background-color: #fff;
+  font-weight: 900;
+  text-align:center;
+  padding-top: 0.5rem;
+  &:hover {
+    transition: 0.2s;
+    background-color: #18df81;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+`
+
 const StorySection = () => {
   return (
     <div id="story">
@@ -159,9 +179,9 @@ const StorySection = () => {
                 schedule a time suitable for you!{" "}
               </p>
             </Div2>
-            <Button>
-              Book Here <i class="fas fa-chevron-right"></i>
-            </Button>
+            <A href="https://calendly.com/v-huang435/chat-with-victor" target="_blank">
+              Book Here <i class="fas fa-chevron-right"></i></A>
+            
           </Content>
         </Div>
         <ImgDiv>
