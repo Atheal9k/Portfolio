@@ -12,7 +12,7 @@ const Section = styled.section`
   background-color: black;
   color: white;
 `;
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   margin-right: 30px;
 
   &:hover {
@@ -32,25 +32,13 @@ const FooterSection = () => {
           </ul>
         </div>
         <div>
-          <StyledLink to="" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </StyledLink>
-          <StyledLink to="https://twitter.com/Atheal9k" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </StyledLink>
           <StyledLink
-            to="https://www.youtube.com/channel/UCsIlKB0CTk89_6WwHv5eX7w"
-            target="_blank"
-          >
-            <i class="fab fa-youtube"></i>
-          </StyledLink>
-          <StyledLink
-            to="https://www.linkedin.com/in/victor-huang-80b933188/"
+            href="https://www.linkedin.com/in/victor-huang-80b933188/"
             target="_blank"
           >
             <i class="fab fa-linkedin"></i>
           </StyledLink>
-          <StyledLink to="https://github.com/Atheal9k/" target="_blank">
+          <StyledLink href="https://github.com/Atheal9k/" target="_blank">
             <i class="fab fa-github"></i>
           </StyledLink>
         </div>
