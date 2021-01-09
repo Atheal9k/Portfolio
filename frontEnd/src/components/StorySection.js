@@ -74,6 +74,7 @@ const Img = styled.img`
   margin-top: 1.7rem;
   object-fit: contain;
   max-height:30%;
+  max-width:100%;
   `}
 `;
 

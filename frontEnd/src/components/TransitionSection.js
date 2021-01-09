@@ -34,7 +34,7 @@ const ImgHolder = styled.div`
   flex-basis: 25%;
   flex-shrink: 0;
   flex-wrap:wrap;
-
+  margin-bottom: 2rem;
 `;
 
 const ImgContainer = styled.div`
