@@ -132,7 +132,7 @@ const Showcase = () => {
                 "Utilizing the AAVE protocol to instantly borrow any amounts of money without collateral and then returning it back to AAVE after a profit."
               }
               github={"https://github.com/Atheal9k/AaveFlash"}
-              website={"https://github.com/Atheal9k/AaveFlash"}
+              website={"https://www.youtube.com/watch?v=3Nd7EZzbXxo"}
             />
           </Carousel>
         </MediaQuery>
@@ -169,7 +169,7 @@ const Showcase = () => {
               "Utilizing the AAVE protocol to instantly borrow any amounts of money without collateral and then returning it back to AAVE after a profit."
             }
             github={"https://github.com/Atheal9k/AaveFlash"}
-            website={"https://github.com/Atheal9k/AaveFlash"}
+            website={"https://www.youtube.com/watch?v=3Nd7EZzbXxo"}
           />
         </MediaQuery>
       </Section>
