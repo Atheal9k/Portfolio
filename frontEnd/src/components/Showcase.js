@@ -57,16 +57,16 @@ const Showcase = () => {
       image: airPlane,
       hoverContent:
         "An escrow like service for the Travel industry. Users can deposit Ethereum to receive Flight Tokens - which will give them the right to redeem or refund the tokens anytime within their unique deadlines.",
-      website: "https://compound-wallet.vercel.app/",
-      github: "https://github.com/Atheal9k/Compound-Wallet",
+      website: "https://traveltrustpay.tech/",
+      github: "https://github.com/Atheal9k/Travel-Trustpay",
     },
     {
       title: "Flash Loans",
       image: aave,
       hoverContent:
         "Utilizing the AAVE protocol to instantly borrow any amounts of money without collateral and then returning it back to AAVE after a profit.",
-      website: "https://compound-wallet.vercel.app/",
-      github: "https://github.com/Atheal9k/Compound-Wallet",
+      website: "https://www.youtube.com/watch?v=3Nd7EZzbXxo",
+      github: "https://github.com/Atheal9k/AaveFlash",
     },
   ]
 
