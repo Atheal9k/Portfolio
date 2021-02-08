@@ -43,8 +43,6 @@ const H1 = styled.h1`
 `
 
 const Showcase = () => {
-  const [activeSlide, setActiveSlide] = useState(0)
-
   const cardData = [
     {
       title: "Compound Wallet",
