@@ -11,7 +11,6 @@ const Section = styled.section`
   position: relative;
   background-color: black;
 
-
   border-bottom: 1px solid #01fe87;
   //object-fit: contain;
   max-height: 100%;
@@ -70,9 +69,6 @@ const Showcase = () => {
       github: "https://github.com/Atheal9k/Compound-Wallet",
     },
   ]
-
-const Showcase = () => {
-  const [activeSlide, setActiveSlide] = useState(0)
 
   return (
     <div id="showcase">
