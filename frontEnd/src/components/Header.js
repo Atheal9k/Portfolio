@@ -1,7 +1,7 @@
-import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
-import styled, { keyframes } from "styled-components";
-import { mediaQueries } from "./mediaQueries";
+import React from "react"
+import { HashLink as Link } from "react-router-hash-link"
+import styled, { keyframes } from "styled-components"
+import { mediaQueries } from "./mediaQueries"
 
 const textAnimation = keyframes`
    0%,10%,100%
@@ -14,7 +14,7 @@ const textAnimation = keyframes`
    }
 
 
-`;
+`
 
 const HeaderSection = styled.header`
   background: url("/images/pattern.jpg") no-repeat center center/cover;
@@ -31,9 +31,7 @@ const HeaderSection = styled.header`
     height: 100%;
     background: rgba(0, 0, 0, 0.4);
   }
-
-  
-`;
+`
 const Div = styled.div`
   display: flex;
   justify-content: space-between;
@@ -51,25 +49,22 @@ const Div = styled.div`
   ${mediaQueries("md")`
   flex-direction: column;
   `}
-  
-`;
+`
 
 const StyledLink = styled(Link)`
-    padding: 10px 20px;
-    margin 0 5px;
- 
+  padding: 10px 20px;
+  margin: 0 5px;
 
-    &:hover{
-        color: #01fe87;
-        text-decoration: none;
-    }
-
-`;
+  &:hover {
+    color: #01fe87;
+    text-decoration: none;
+  }
+`
 const Ul = styled.ul`
   display: flex;
-  text-align:center;
-  flex-wrap:wrap;
-`;
+  text-align: center;
+  flex-wrap: wrap;
+`
 
 const H1 = styled.h1`
   font-weight: 300;
@@ -77,7 +72,7 @@ const H1 = styled.h1`
   font-size: 1.6rem;
   text-transform: uppercase;
   cursor: pointer;
-`;
+`
 const Div2 = styled.div`
   display: flex;
   flex-direction: column;
@@ -87,7 +82,7 @@ const Div2 = styled.div`
   height: 100%;
   padding: 0 20px;
   color: #fff;
-`;
+`
 const HH1 = styled.h1`
     display: flex;
     align-items: center;
@@ -119,8 +114,7 @@ const HH1 = styled.h1`
       
    }
 
-`;
-
+`
 
 const Header = () => {
   return (
@@ -131,13 +125,19 @@ const Header = () => {
           <nav>
             <Ul>
               <li>
-                <StyledLink smooth to="#showcase" >Project Showcase</StyledLink>
+                <StyledLink smooth to="#showcase">
+                  Project Showcase
+                </StyledLink>
               </li>
               <li>
-                <StyledLink smooth to="#story">My Story</StyledLink>
+                <StyledLink smooth to="#story">
+                  My Story
+                </StyledLink>
               </li>
               <li>
-                <StyledLink smooth to="#footer">Contact Me</StyledLink>
+                <StyledLink smooth to="#footer">
+                  Contact Me
+                </StyledLink>
               </li>
             </Ul>
           </nav>
@@ -148,7 +148,7 @@ const Header = () => {
         </Div2>
       </HeaderSection>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
