@@ -23,6 +23,8 @@ const GlobalStyle = createGlobalStyle`
         background: #fff;
         color: #333;
         line-height: 1.6;
+        overflow-x:hidden;
+       
     }
 
     ul {
