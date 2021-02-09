@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import styled from "styled-components";
-import { mediaQueries } from "./mediaQueries";
+import React from "react"
+import { Link } from "react-router-dom"
+import styled from "styled-components"
+import { mediaQueries } from "./mediaQueries"
 
 const Section = styled.section`
   display: flex;
@@ -17,7 +17,7 @@ const Section = styled.section`
   justify-content: center;
   
   `}
-`;
+`
 
 const Div = styled.div`
   width: 35%;
@@ -31,7 +31,7 @@ const Div = styled.div`
   ${mediaQueries("sm")`
   width: 90%;
   `}
-`;
+`
 
 const Div2 = styled.div`
   font-weight: 500;
@@ -42,7 +42,7 @@ const Div2 = styled.div`
   ${mediaQueries("md")`
   font-size: 1.2rem;
   `}
-`;
+`
 
 const Content = styled.div`
   display: flex;
@@ -50,9 +50,7 @@ const Content = styled.div`
   align-self: flex-start;
   justify-content: flex-start;
   width: 100%;
-
-
-`;
+`
 
 const ImgDiv = styled.div`
   display: flex;
@@ -66,7 +64,7 @@ const ImgDiv = styled.div`
   ${mediaQueries("lg")`
 
   `}
-`;
+`
 
 const Img = styled.img`
   max-height: 100%;
@@ -76,7 +74,7 @@ const Img = styled.img`
   max-height:30%;
   max-width:100%;
   `}
-`;
+`
 
 const H1 = styled.h1`
   font-size: 3.3rem;
@@ -87,7 +85,7 @@ const H1 = styled.h1`
   ${mediaQueries("md")`
     text-align:center;
   `}
-`;
+`
 
 const H2 = styled.h2`
   text-transform: uppercase;
@@ -97,11 +95,11 @@ const H2 = styled.h2`
   ${mediaQueries("sm")`
     text-align:center;
   `}
-`;
+`
 
 const P = styled.p`
   font-weight: 900;
-`;
+`
 
 const Button = styled.button`
   margin-top: 2rem;
@@ -117,9 +115,9 @@ const Button = styled.button`
     background-color: #18df81;
     color: #fff;
   }
-`;
+`
 
-const A = styled.a `
+const A = styled.a`
   text-decoration: none;
   margin-top: 2rem;
   max-width: 200px;
@@ -170,7 +168,7 @@ const StorySection = () => {
 
               <p>
                 As a copywriter and a developer I'm also able to develop DApps
-                and comminucate clealy the business and economic value of the
+                and communicate clealy the business and economic value of the
                 technology for everyone to understand easily.{" "}
               </p>
 
@@ -180,9 +178,11 @@ const StorySection = () => {
                 schedule a time suitable for you!{" "}
               </p>
             </Div2>
-            <A href="https://calendly.com/v-huang435/chat-with-victor" target="_blank">
-              Book Here <i class="fas fa-chevron-right"></i></A>
-            
+            <A
+              href="https://calendly.com/v-huang435/chat-with-victor"
+              target="_blank">
+              Book Here <i class="fas fa-chevron-right"></i>
+            </A>
           </Content>
         </Div>
         <ImgDiv>
@@ -190,7 +190,7 @@ const StorySection = () => {
         </ImgDiv>
       </Section>
     </div>
-  );
-};
+  )
+}
 
-export default StorySection;
+export default StorySection
