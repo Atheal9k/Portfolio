@@ -6,6 +6,7 @@ const GridContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 
   div {
     position: relative;
@@ -21,12 +22,12 @@ const GridContainer = styled.div`
       justify-content: flex-start;
       align-items: flex-end;
       z-index: 2;
-      bottom: -160px;
-      width: 100%;
+      bottom: 0;
+      max-width: 100%;
       height: 100%;
       padding: 20;
       opacity: 0;
-      transition: bottom 0.5s;
+      transition: opacity 0.5s;
       backdrop-filter: blur(0px);
       color: white;
       padding: 1.2rem;
@@ -64,6 +65,14 @@ const A = styled.a`
   }
 `
 
+const StyledHeader = styled.header`
+  width: 100%;
+  h2 {
+    text-align: center;
+    color: #01fe87;
+  }
+`
+
 export const ShowcaseCards = ({ data }) => {
   return (
     <>
@@ -72,6 +81,10 @@ export const ShowcaseCards = ({ data }) => {
           <div key={newData.title}>
             <StyledImg src={newData.image} />
             <div>
+              <StyledHeader>
+                <h2>{newData.title}</h2>
+              </StyledHeader>
+
               {newData.hoverContent}
               <Links>
                 <A href={newData.github} target="_blank">

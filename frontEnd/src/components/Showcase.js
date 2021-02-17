@@ -1,9 +1,13 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import ShowcaseCards from "./ShowcaseCards"
-import compoundImage from "../resources/compound.jpg"
+import compoundImage from "../resources/compound-finance.webp"
 import airPlane from "../resources/plane.jpg"
+import travelTrust from "../resources/travelTrust.png"
 import aave from "../resources/aave.PNG"
+import marketTop from "../resources/market-top.png"
+import coinlistClone from "../resources/coinlist-clone.png"
+import deriOne from "../resources/optionsProtocol.png"
 import { mediaQueries } from "./mediaQueries"
 
 const Section = styled.section`
@@ -54,7 +58,7 @@ const Showcase = () => {
     },
     {
       title: "Travel Trust Pay",
-      image: airPlane,
+      image: travelTrust,
       hoverContent:
         "An escrow like service for the Travel industry. Users can deposit Ethereum to receive Flight Tokens - which will give them the right to redeem or refund the tokens anytime within their unique deadlines.",
       website: "https://traveltrustpay.tech/",
@@ -67,6 +71,28 @@ const Showcase = () => {
         "Utilizing the AAVE protocol to instantly borrow any amounts of money without collateral and then returning it back to AAVE after a profit.",
       website: "https://www.youtube.com/watch?v=3Nd7EZzbXxo",
       github: "https://github.com/Atheal9k/AaveFlash",
+    },
+    {
+      title: "Time The Top",
+      image: marketTop,
+      hoverContent:
+        "A game where users can try to time the top of the markets and sell their investments.",
+      website: "https://time-the-top.vercel.app/",
+      github: "https://github.com/Atheal9k/Time-The-Top",
+    },
+    {
+      title: "CoinGecko Clone",
+      image: coinlistClone,
+      hoverContent: "A clone of a popular cryptocurrency index website.",
+      website: "https://coinlist-git-master.atheal9k.vercel.app/",
+      github: "https://github.com/Atheal9k/UTU-coingecko-clone",
+    },
+    {
+      title: "Options Aggregator",
+      image: deriOne,
+      hoverContent: "Aggregates various Option Contracts from Option Protocols",
+      website: "https://youtu.be/sHjiRVZK63c",
+      github: "https://github.com/DeriOne-Protocol/DeriOne-frontend",
     },
   ]
 
