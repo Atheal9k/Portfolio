@@ -84,36 +84,34 @@ const Div2 = styled.div`
   color: #fff;
 `
 const HH1 = styled.h1`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:absolute;
-     
-    letter-spacing: 1.6rem;
-    font-size: 14vw
-    font-weight: 500;
-    color: #252839;
-    -webkit-text-stroke: 0.3vw #383d52;
-    text-transform: uppercase;
-    
-   &:before {
-       content: "Welcome";
-       position: absolute;
-       top: 0;
-       left: 0;
-       width: 100%;
-       height: 100%;
-       color: #01fe87;
-       -webkit-text-stroke: 0vw #383d52;
-       border-right: 2px solid #01fe87;
-       overflow: hidden;
-       animation-name: ${textAnimation};
-       animation-duration: 6s;
-       animation-timing-function: linear;
-       animation-iteration-count: infinite;
-      
-   }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 
+  letter-spacing: 1.6rem;
+  //font-size: 14vw;
+  font-weight: 500;
+  color: #252839;
+  -webkit-text-stroke: 0.3vw #383d52;
+  text-transform: uppercase;
+
+  &:before {
+    content: "Welcome";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #383d52;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation-name: ${textAnimation};
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
 `
 
 const Header = () => {

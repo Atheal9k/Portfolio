@@ -3,9 +3,9 @@ import styled from "styled-components"
 import ShowcaseCards from "./ShowcaseCards"
 import compoundImage from "../resources/compound-finance.webp"
 import airPlane from "../resources/plane.jpg"
-import travelTrust from "../resources/travelTrust.png"
+import travelTrust from "../resources/travel-trust.jpg"
 import aave from "../resources/aave.PNG"
-import marketTop from "../resources/market-top.png"
+import marketTop from "../resources/time-the-top.jpg"
 import coinlistClone from "../resources/coinlist-clone.png"
 import deriOne from "../resources/optionsProtocol.png"
 import { mediaQueries } from "./mediaQueries"
@@ -99,7 +99,7 @@ const Showcase = () => {
   return (
     <div id="showcase">
       <Div>
-        <H1>Blockchain Projects Showcase</H1>
+        <H1>Projects Showcase</H1>
       </Div>
 
       <Section>
